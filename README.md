@@ -193,7 +193,7 @@ All require an `x-user-id` header with the user’s ID.
 
 ***
 
-## Postman Screenshot Proof
+## Postman Screenshots
 
 ### Create Alert
 
