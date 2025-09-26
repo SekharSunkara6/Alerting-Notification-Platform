@@ -232,15 +232,6 @@ While this MVP satisfies all assignment requirements, the code is designed for e
 
 ***
 
-## Notes & Known Limitations
-
-- In-memory data storage limits persistence (loses data on server restart)
-- User authentication simulated using headers for demo purposes
-- Timezone consistency maintained with UTC datetime handling
-- Manual API endpoint for reminder triggering simulates real scheduling
-
-***
-
 ## Author
 
 Your Name  
