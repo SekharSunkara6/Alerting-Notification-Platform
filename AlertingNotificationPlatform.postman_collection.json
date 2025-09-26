@@ -1,0 +1,161 @@
+{
+  "info": {
+    "_postman_id": "alerting-notification-platform-sample",
+    "name": "Alerting & Notification Platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Admin: Create Alert",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Test Alert for Screenshot\",\n  \"message\": \"This is a demo alert.\",\n  \"severity\": \"Info\",\n  \"startTime\": \"2025-09-24T00:00:00.000Z\",\n  \"expiryTime\": \"2025-09-30T00:00:00.000Z\",\n  \"visibleToOrg\": true\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/admin/alerts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["admin", "alerts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Admin: List Alerts",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/admin/alerts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["admin", "alerts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User: Fetch Alerts (user1)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-user-id",
+            "value": "user1"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/alerts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["user", "alerts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User: Mark Alert as Read (user1)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-user-id",
+            "value": "user1"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/alerts/{{alertId}}/read",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["user", "alerts", "{{alertId}}", "read"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User: Snooze Alert (user1)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-user-id",
+            "value": "user1"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/alerts/{{alertId}}/snooze",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["user", "alerts", "{{alertId}}", "snooze"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User: Fetch Alerts After Snooze (user1)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-user-id",
+            "value": "user1"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/user/alerts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["user", "alerts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Trigger Reminder Simulation",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/trigger-reminders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["trigger-reminders"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Analytics Overview",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/analytics",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["analytics"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "alertId",
+      "value": ""
+    }
+  ]
+}
