@@ -197,17 +197,27 @@ All require an `x-user-id` header with the user’s ID.
 
 ### Create Alert
 
-![Create Alert](screenshots/create_alert.png
+![Create Alert](screenshots/create_alert.png)
 
-![List Alerts](screenshots/list_alerts.png Alerts
+### List Alerts
 
-![Fetch Alerts](screenshots/fetch_alerts_user.png Alert As Read
+![List Alerts](screenshots/list_alerts.png)
 
-![Mark as Read](screenshots/mark_read.png Alert
+### Fetch Alerts
 
-![Snooze Alert](screenshots/snooze_alert.png Summary
+![Fetch Alerts](screenshots/fetch_alerts_user.png)
 
-![Analytics](screenshots/analytics.png ensibility & Future Scope
+### Mark Alert As Read
+
+![Mark as Read](screenshots/mark_read.png)
+
+### Snooze Alert
+
+![Snooze Alert](screenshots/snooze_alert.png)
+
+### Analytics Summary
+
+![Analytics](screenshots/analytics.png)
 
 While this MVP satisfies all assignment requirements, the code is designed for easy extension to include:
 
